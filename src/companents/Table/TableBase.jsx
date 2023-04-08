@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Col, Container, Form, Row, Table } from 'react-bootstrap'
 import axios from 'axios'
 import '../Table/TableBase.css'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const TableBase = () => {
   const [name, setName] = useState([])
@@ -14,18 +14,19 @@ const TableBase = () => {
         setName(data?.data)
       })
   }
-  // const delete_func = (id) => {
-  //   axios.delete(`https://dbjsoninserver-production.up.railway.app/data/${id}`)
-  //     .then((res) => {
-  //       alert(res.statusText)
-  //     })
-  // }
-  // const edite_func = (id) => {
-  //   axios.edikkjte(`https://dbjsoninserver-production.up.railway.app/data/${id}`)
-  //     .then((res) => {
-  //       alert(res.statusText)
-  //     })
-  // }
+  const delete_func = (id) => {
+    axios.delete(`https://dbjsoninserver-production.up.railway.app/data/${id}`)
+      .then((res) => {
+        alert(res.statusText)
+        setName(name.filter((el)=>el.id !== id))
+      })
+  }
+  const edite_func = (id) => {
+    axios.edikkjte(`https://dbjsoninserver-production.up.railway.app/data/${id}`)
+      .then((res) => {
+        alert(res.statusText)
+      })
+  }
   useEffect(() => {
     getAllData()
   }, [])
@@ -44,8 +45,8 @@ const TableBase = () => {
           <Col xs={7}>
             <Table striped bordered hover>
               {name.filter((res) => {
-                console.log(res.name);
-                return res.name.toLocaleLowerCase() === "" ? value : res.name.toLocaleLowerCase().includes(value)
+                console.log(res.title);
+                return res.title.toLocaleLowerCase() === "" ? value : res.title.toLocaleLowerCase().includes(value)
               })
                 .map((data) => {
                   return (
@@ -67,12 +68,12 @@ const TableBase = () => {
                             <br />
                             <th style={{ paddingRight: "15px", fontSize: "23px", paddingBottom: "20px" }}>img: </th>
                             <td style={{ color: "gray" }}>{data.img}</td>
-                            {/* <div className="bothbtn"> */}
-                              {/* <button className='deletbtn' onClick={() => delete_func(data.id)}>delet</button> */}
-                              {/* <Link to={`/table/editetable/${data.id}`}> */}
-                                {/* <button className='editbtn ' onClick={() => edite_func(data.id)}>Edite</button> */}
-                              {/* </Link> */}
-                            {/* </div> */}
+                            <div className="bothbtn">
+                              <button className='deletbtn' onClick={() => delete_func(data.id)}>delet</button>
+                              <Link to={`/table/editetable/${data.id}`}>
+                                <button className='editbtn ' onClick={() => edite_func(data.id)}>Edite</button>
+                              </Link>
+                            </div>
                           </div>
                         </tr>
                       </tbody>

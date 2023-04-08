@@ -5,7 +5,6 @@ import createData from '../DinamicAxios/DinamicAxios'
 import "../Section/Section.css"
 
 const CreateData = () => {
-
   const [title, setLocation] = useState('')
   const [price, setPrice] = useState('')
   const [author, setSale] = useState('')
@@ -19,7 +18,7 @@ const CreateData = () => {
       author: author,
       img: img,
     }
-    let url = ' https://dbjsoninserver-production.up.railway.app/data'
+    let url = 'https://dbjsoninserver-production.up.railway.app/data'
     await createData(url, data)
       .then((res) => {
         if (res.status === 201) {
