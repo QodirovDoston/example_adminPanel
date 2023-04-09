@@ -13,20 +13,18 @@ const EditeData = () => {
     const {id} = useParams()
     console.log(id);
 
-const GetOne =(id)=>{
+const getOne =(id)=>{
     axios.get(`https://dbjsoninserver-pro65duction.up.railway.app/data/${id}`).then((data)=>{
-      console.log(data.data.name);
-        setLocation(data.data.location)
-        setPrice(data.data.price)
-        setSale(data.data.sale)
-        setImg(data.data.img)
+      console.log(data?.data.name );
+        setLocation(data?.data.location)
+        setPrice(data?.data.price)
+        setSale(data?.data.sale)
+        setImg(data?.data.img)
     })
 }
 useEffect(() => {
-    GetOne(id)
-}, [])
-console.log(id);
-
+    getOne(id)
+}, [id])
     const editeData_func = () => {
         let obj={
             title: title,
