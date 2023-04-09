@@ -4,7 +4,13 @@ import axios from 'axios'
 import '../Table/TableBase.css'
 import { Link } from 'react-router-dom'
 
+
+import { useTranslation } from 'react-i18next';
+import i18next from 'i18next';
+
 const TableBase = () => {
+  const { t } = useTranslation()
+
   const [name, setName] = useState([])
   const [value, SetValue] = useState("")
   const getAllData = () => {
@@ -34,9 +40,9 @@ const TableBase = () => {
       <Container >
         <div className='justify-between '>
           <Row className='justify-content-center mt-5'>
-          <Col xs={6}>
+          <Col xs={10} sm={12}>
             <Form.Group className=" justify-content-center mb-[-40px]">
-              <Form.Label>Search information</Form.Label>
+              <div className='text-[16px]'>{t("text.search")}</div>
               <Form.Control placeholder="Search" onChange={(e) => SetValue(e.target.value)} />
             </Form.Group>
           </Col>
@@ -53,22 +59,22 @@ const TableBase = () => {
                 .map((data) => {
                   return (
                     <>
-                      <tbody className='flex sm:mt-0 sm:mb-0 mb-[-1020px]  mt-[-100px]'>
+                      <tbody className=' sm:mt-0 sm:mb-0 mb-[-850px]  mt-[-70px] '>
                         <tr className='m-12 sm:grid ml-0  sm:grid-cols-3 grid grid-cols-1 grid-rows-3' >
-                          <div className='bg-blue-200 mt-6 w-[350px] h-[470px] rounded-[30px] ' key={data.id}>
+                          <div className='bg-blue-200 mt-6 w-[350px] h-[370px] rounded-[30px] ' key={data.id}>
                             <div className=' flex-wrap m-9  '>
                               <th className='mb-[-20px]' >#:</th>
                               <td  >{data.id}</td>
-                              <br />
+                              <h r />
                               <th >title: </th>
                               <td  >{data.title}</td>
-                              <br />
+                              <h r />
                               <th >price: </th>
                               <td  >{data.price}</td>
-                              <br />
+                              <h r />
                               <th >author: </th>
                               <td >{data.author}</td>
-                              <br />
+                              <h r />
                               <th className='' >img: 
                               </th>
                               <img className='w-[90px] h-[90px]' src={data.img} alt="" />

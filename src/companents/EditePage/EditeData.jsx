@@ -42,27 +42,27 @@ useEffect(() => {
     <Container>
       <Row className='justify-content-center mt-1'>
         <Col xs={8}>
-          <h1 style={{ textAlign: "center" }}>Edite page</h1>
+          <h1 className='align-middle sm:text-[32px] text-[19px]'>Edite page</h1>
           <Form >
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className='name'>title</Form.Label>
+              <Form.Label  className='text-[2-px] sm:text-[29px]'>title</Form.Label>
               <Form.Control value={title}  type="text" placeholder="title" onChange={(e) => setLocation(e.target.value)} />
-              {title.length < 1 ? <p style={{color:"red"}}>error</p> : <p style={{color:"green"}}>success</p>}
+              {title.length < 1 ? <p className='text-red-500 text-[13px] sm:text-[20px]'>error</p> : <p className='text-green-500 text-[13px] sm:text-[20px]'>success</p>}
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className='name'>price</Form.Label>
+              <Form.Label  className='text-[2-px] sm:text-[29px]'>price</Form.Label>
               <Form.Control value={price}  type="text" placeholder="price" onChange={(e) => setPrice(e.target.value)} />
-              {price.length < 1 ? <p style={{color:"red"}}>error</p> : <p style={{color:"green"}}>success</p>}
+              {price.length < 1 ? <p className='text-red-500 text-[13px] sm:text-[20px]'>error</p> : <p className='text-green-500 text-[13px] sm:text-[20px]'>success</p>}
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className='name'>sale</Form.Label>
+              <Form.Label  className='text-[2-px] sm:text-[29px]'>sale</Form.Label>
               <Form.Control  value={sale} type="text" placeholder="sale" onChange={(e) => setSale(e.target.value)} />
-              {sale.length < 1 ? <p style={{color:"red"}}>error</p> : <p style={{color:"green"}}>success</p>}
+              {sale.length < 1 ? <p className='text-red-500 text-[13px] sm:text-[20px]'>error</p> : <p className='text-green-500 text-[13px] sm:text-[20px]'>success</p>}
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label className='name'>img</Form.Label>
+              <Form.Label  className='text-[2-px] sm:text-[29px]'>img</Form.Label>
               <Form.Control value={img}  type="text" placeholder="img" onChange={(e) => setImg(e.target.value)} />
-              {img.length < 1 ? <p style={{color:"red"}}>error</p> : <p style={{color:"green"}}>success</p>}
+              {img.length < 1 ? <p className='text-red-500 text-[13px] sm:text-[20px]'>error</p> : <p className='text-green-500 text-[13px] sm:text-[20px]'>success</p>}
             </Form.Group>
             {title.length  < 2 ?
              <Button style={{width:"100%" }}variant="primary"> Submit </Button>:<Button style={{width:"100%"}} variant="primary" onClick={editeData_func}>
