@@ -7,18 +7,17 @@ import "../Section/Section.css"
 const EditeData = () => {
     const [title, setLocation] = useState('')
     const [price, setPrice] = useState('')
-    const [sale, setSale] = useState('')
+    const [author, setSale] = useState('')
     const [img, setImg] = useState('')
     const navigate = useNavigate()
     const {id} = useParams()
-    console.log(id);
+    console.log(id,  "===============================");
 
 const getOne =(id)=>{
-    axios.get(`https://dbjsoninserver-pro65duction.up.railway.app/data/${id}`).then((data)=>{
-      console.log(data?.data.name );
-        setLocation(data?.data.location)
+    axios.get(`https://dbjsoninserver-production.up.railway.app/data/${id}`).then((data)=>{
+        setLocation(data?.data.title)
         setPrice(data?.data.price)
-        setSale(data?.data.sale)
+        setSale(data?.data.author)
         setImg(data?.data.img)
     })
 }
@@ -29,7 +28,7 @@ useEffect(() => {
         let obj={
             title: title,
             price: price,
-            sale: sale,
+            sale: author,
             img: img,
         }
         axios.put(`https://dbjsoninserver-production.up.railway.app/data/${id}`, obj).then((res) => {
@@ -56,8 +55,8 @@ useEffect(() => {
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label  className='text-[2-px] sm:text-[29px]'>sale</Form.Label>
-              <Form.Control  value={sale} type="text" placeholder="sale" onChange={(e) => setSale(e.target.value)} />
-              {sale.length < 1 ? <p className='text-red-500 text-[13px] sm:text-[20px]'>error</p> : <p className='text-green-500 text-[13px] sm:text-[20px]'>success</p>}
+              <Form.Control  value={author} type="text" placeholder="sale" onChange={(e) => setSale(e.target.value)} />
+              {author.length < 1 ? <p className='text-red-500 text-[13px] sm:text-[20px]'>error</p> : <p className='text-green-500 text-[13px] sm:text-[20px]'>success</p>}
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label  className='text-[2-px] sm:text-[29px]'>img</Form.Label>

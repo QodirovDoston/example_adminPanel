@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom'
 
 
 import { useTranslation } from 'react-i18next';
-import i18next from 'i18next';
-
+// import i18next from '../../i18n';
 const TableBase = () => {
   const { t } = useTranslation()
 
@@ -75,7 +74,7 @@ const TableBase = () => {
                               <th >author: </th>
                               <td >{data.author}</td>
                               <h r />
-                              <th className='' >img: 
+                              <th  >img: 
                               </th>
                               <img className='w-[90px] h-[90px]' src={data.img} alt="" />
                               <div className="flex gap-3 mt-2 ">

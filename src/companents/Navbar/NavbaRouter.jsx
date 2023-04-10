@@ -5,7 +5,6 @@ import { CiBookmarkPlus } from "react-icons/ci";
 import { AiOutlineHdd } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import '../Navbar/Nav.css'
-
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
@@ -29,8 +28,8 @@ const NavbaRouter = () => {
                   </li>
                 </Link>
                 <div className=" flex ">
-                  <div class="dropdown">
-                    <button class="dropbtn ">
+                  <div className="dropdown">
+                    <button className="dropbtn ">
                       <Link style={{ color: "black", textDecoration: "none", marginTop: "8px", paddingLeft: "10px" }} to="/home">
                         <li className='list-none sm:text-[50px] text-[30px] sm:mt-[-12px] mt-[-12px] '>
                           <IoListSharp />
@@ -38,7 +37,7 @@ const NavbaRouter = () => {
                         </li>
                       </Link>
                     </button>
-                    <div class="dropdown-content">
+                    <div className="dropdown-content">
                       <a href="/home" > About</a>
                       <p className='m-2' onClick={() => handlClick("rus")}>Russian</p>
                       <p className='m-2' onClick={() => handlClick("uz")}>Uzbek</p>
