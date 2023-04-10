@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 
 import { useTranslation } from 'react-i18next';
-import i18next from '../../i18n';
+// import i18next from '../../i18n';
 
 const Home = () => {
   const { t } = useTranslation()
