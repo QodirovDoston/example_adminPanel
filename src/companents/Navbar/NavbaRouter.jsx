@@ -23,8 +23,7 @@ const NavbaRouter = () => {
               <div className=" flex sm:ml-[-40px]  sm:gap-[400px] ml-[30px]      ">
                 <Link href style={{ color: "black", textDecoration: "none", marginTop: "8px" }} to="https://github.com/QodirovDoston">
                   <li className=' list-none sm:text-[50px] text-[30px] sm:mt-2 mt-2  ml-1'>
-                    <AiFillGithub />
-                    <h5 className="sm:ml-[-13px] ml-[1px] sm:text-[25px] text-[15px]"> {t('text.nav')}</h5>
+                  <i class="fa-brands fa-amazon fa-2xl" ></i>
                   </li>
                 </Link>
                 <div className=" flex ">

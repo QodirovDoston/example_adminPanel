@@ -15,6 +15,8 @@ const App = () => {
         <Route path='/create' element={<CreateData/>}/>
         <Route path='/table' element={<TableBase/>}/>
         <Route path='/table/editetable/:id' element={<EditeData/>}/>
+            {/* <h1>My Chart</h1>
+            <ChartComponent/> */}
       </Routes> 
     </div>
   )

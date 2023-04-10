@@ -1,27 +1,6 @@
-/* .deletbtn{
-    color: #fff;
-    background-color: red;
-    border:none;
-    font-size: 24px;
-    border-radius: 10px;
-    width: 90px;
-    height: 50px;
 
-
+.img{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/008/555/695/non_2x/abstract-yellow-cyber-grey-metallic-geometric-on-dark-grey-black-hexagon-mesh-design-modern-technology-futuristic-background-vector.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;  
 }
-.editbtn{
-    font-size: 24px;
-    border-radius: 10px;
-    color: #fff;
-    background-color: chartreuse;
-    border:none;
-    width: 90px;
-    height: 50px;
-}
-.bothbtn{
-display: flex;
-gap: 20px;
-}
-body{
-    background-color: rgb(246, 249, 228);
-} */

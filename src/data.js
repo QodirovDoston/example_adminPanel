@@ -1,5 +1,4 @@
-{
-  "data": [
+export default userData= [
     {
       "id": 1,
       "title": "Apple BYZ S852I",
@@ -17,4 +16,3 @@
       "amount": 1
     }
   ]
-}
