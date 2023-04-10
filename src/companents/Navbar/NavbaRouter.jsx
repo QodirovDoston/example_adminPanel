@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 import { IoListSharp } from "react-icons/io5";
 import { CiBookmarkPlus } from "react-icons/ci";
 import { AiOutlineHdd } from "react-icons/ai";
-import { AiFillGithub } from "react-icons/ai";
+// import { AiFillGithub } from "react-icons/ai";
 import '../Navbar/Nav.css'
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
 const NavbaRouter = () => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   const handlClick = (lang) => {
     i18next.changeLanguage(lang)

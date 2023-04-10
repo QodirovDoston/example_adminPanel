@@ -8,7 +8,7 @@ import { useTranslation } from 'react-i18next';
 // import i18next from 'i18next';
 
 const TableBase = () => {
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
 
   const [name, setName] = useState([])
   const [value, SetValue] = useState("")
