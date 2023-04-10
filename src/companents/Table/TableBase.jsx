@@ -4,7 +4,7 @@ import axios from 'axios'
 import '../Table/TableBase.css'
 import { Link } from 'react-router-dom'
 
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 // import i18next from 'i18next';
 
 const TableBase = () => {
